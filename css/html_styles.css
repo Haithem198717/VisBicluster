@@ -1,0 +1,169 @@
+@charset "UTF-8";
+/**
+* Styles for pure html layout
+*/
+#wrapper {
+    position: absolute;
+    top: 0px;
+    bottom: 0px;
+    left: 0px;
+    right: 0px;
+    /*padding-top: 60px;*/
+}
+.visbic-body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+
+.visbic-body {
+  /** ============ Configuration Panel Left ============== */ }
+  .visbic-body a:link,
+  .visbic-body a:visited {
+    color: black; }
+  .visbic-body .visbic-body h1 {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+  .visbic-body .header-label-left {
+    margin-right: 5px;
+    float: left;
+    color: white; }
+  .visbic-body #data-loading-indicator {
+    padding-left: 5px;
+    padding-right: 5px; }
+  .visbic-body .header, .visbic-body .header-right, .visbic-body .header-right-clickable {
+    color: white;
+    font-weight: bold; }
+    .visbic-body .header a:visited, .visbic-body .header-right a:visited, .visbic-body .header-right-clickable a:visited,
+    .visbic-body .header a:link, .visbic-body .header-right a:link, .visbic-body .header-right-clickable a:link {
+      color: white;
+      text-decoration: none; }
+  .visbic-body .header-right, .visbic-body .header-right-clickable {
+    float: right;
+    padding-right: 10px; }
+  .visbic-body .header-right-clickable {
+    cursor: pointer; }
+  .visbic-body #header-ds-selector {
+    float: right;
+    color: black; }
+  .visbic-body .button-panel {
+    display: inline-block;
+    margin-left: 10px;
+    margin-right: 5px; }
+  .visbic-body .header-container {
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background: #382dd7;
+    border-bottom: 2px solid #999;
+    display: block;
+    height: 20px;
+    color: #666; }
+  .visbic-body .menu-container {
+    padding: 5px 10px;
+    background: #eee;
+    border-bottom: 2px solid #999;
+    display: block;
+    height: 20px;
+    text-align: right;
+    font-size: 0.8em;
+    font-style: italic; }
+  .visbic-body .padded-container {
+    padding: 20px 20px 10px; }
+  .visbic-body html, .visbic-body body, .visbic-body .ui-container {
+    height: 100%; }
+  .visbic-body .ui-container {
+    display: table;
+	height: 100%;
+    width: 100%;
+    /*margin-top: -30px;*/
+    /* header + menu */
+    /*padding-top: 15px;*/
+    min-height: 100%;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box; }
+  .visbic-body .ui-fader {
+    position: absolute;
+    /* makes the div go into a position that’s absolute to the browser viewing area */
+    background-color: white;
+    width: 100%;
+    height: 100%;
+    z-index: 90;
+    /* makes the div the second most top layer, so it’ll lay on top of everything else EXCEPT for divs with a higher z-index (meaning the #overlay ruleset) */ }
+  .visbic-body .ui-overlay-loading {
+    display: block;
+    /* ensures it’s invisible until it’s called */
+    position: absolute;
+    /* makes the div go into a position that’s absolute to the browser viewing area */
+    left: 50%;
+    /* positions the div half way horizontally */
+    top: 50%;
+    /* positions the div half way vertically */
+    padding: 25px;
+    z-index: 100;
+    /* makes the div the top layer, so it’ll lay on top of the other content */
+    color: white; }
+  .visbic-body .ui-header {
+    height: 30px; }
+  .visbic-body .ui-menu {
+    height: 50px; }
+  .visbic-body .ui-row {
+    height: 100%;
+	display: flex;
+    flex-direction: row;
+    /*display: table-row;*/ }
+  .visbic-body .ui-column {
+	height: 100%;
+    display: table-cell;
+    vertical-align: top;
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-right: 10px; }
+  .visbic-body .ui-column.ui-column-15 {
+    width: 15%;
+    min-width: 180px; }
+  .visbic-body .ui-column.ui-column-25 {
+    width: 25%; }
+  .visbic-body .ui-column.ui-column-50 {
+    width: 50%; }
+  .visbic-body .ui-column.ui-column-60 {
+    width: 60%; }
+  .visbic-body .ui-column.ui-column-75 {
+    background: yellow;
+    width: 75%;
+    min-width: 75%; }
+  .visbic-body .ui-column.ui-column-100 {
+    width: 100%; }
+  .visbic-body .ui-column.ui-column-33 {
+    background: pink;
+    width: 33%; }
+  .visbic-body .ui-column.ui-column-66 {
+    background: lightpurple;
+    width: 66%;
+    min-width: 66%; }
+  .visbic-body .ui-column.ui-layout-center {
+	height: 100%;
+    border-left: 2px solid #999; }
+  .visbic-body .ui-column.ui-layout-west {
+	height: 100%; 
+	/*border-right: 2px solid #999;*/}
+  .visbic-body .ui-column.ui-layout-east {
+	 height: 100%;
+	 border-left: 2px solid #999;}
+  .visbic-body .configTable, .visbic-body #dataset-info-viewer {
+    padding-bottom: 10px;
+    font-size: 12px;
+    display: inline-block;
+    float: left;
+    clear: both; }
+  .visbic-body .configHeader {
+	font: 14px sans-serif;
+    font-weight: bold;
+    padding-bottom: .2em; }
+  .visbic-body .configH1 {
+    font-weight: bold; }
+  .visbic-body #dataset-info-viewer {
+    color: white;
+    background-color: #636363;
+    padding: .4em; }
+    .visbic-body #dataset-info-viewer a:link,
+    .visbic-body #dataset-info-viewer a:visited {
+      color: white; }
+    

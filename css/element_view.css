@@ -1,0 +1,9 @@
+.visbic-body .subset-state-toggle-button {
+  cursor: default; }
+
+.visbic-body .subset-state-toggle-button .fw {
+  color: #636363; }
+
+.visbic-body .subset-state-toggle-button:hover .fw {
+  color: #000; }
+

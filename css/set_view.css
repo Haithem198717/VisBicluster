@@ -1,0 +1,524 @@
+/**
+ * SVG styles for the set view.
+ * Currently still a mess of various things
+ */
+.visbic-body {
+  /** The set size bar */
+  /** The subSet size bar */
+  /** The labels for the vertical set names */
+  /*.cell, .what, .setSize, .disproportionality, .subSetSize, .groupBackGround {*/
+  /*stroke: #fff;*/
+  /*stroke-width: .5;*/
+  /*}*/
+  /* ---------------- The set selector --------------- */
+  /* ---------------- tables --------------- */
+  /*--- logic --*/
+  /** === Filter Controls === */
+  /** ==== for range slider == **/
+  /*.groupingSelect{*/
+  /*position: relative;*/
+  /*left:-6px;*/
+  /*}*/
+  /*.groupBackGround .filterGroup{*/
+  /*fill: #d3d3d3;;  */
+  /*logic Color*/
+  /**/
+  /*}*/ }
+  .visbic-body .axis path,
+  .visbic-body .axis line {
+    fill: none;
+    stroke: gray;
+    shape-rendering: crispEdges; }
+  .visbic-body .axis text {
+    font-size: 0.6em; }
+  .visbic-body .setSize {
+    /*fill: #bbb0fb;*/
+    fill: #636363;
+    stroke: white;
+    stroke-width: 1px; }
+  .visbic-body .unusedSetSize {
+    fill: lightgray;
+    stroke: white;
+    stroke-width: 1px; }
+  .visbic-body .setSizeBackground, .visbic-body .unusedSetSizeBackground {
+    fill: #f0f0f0;
+    stroke: white;
+    stroke-width: 1px; }
+  .visbic-body .setSizeBackground:hover {
+    stroke: white;
+    shape-rendering: crispEdges; }
+  .visbic-body .subSetSize.row-type-subset {
+    fill: #737373; }
+  .visbic-body .subSetSize.row-type-group {
+    fill: #535353; }
+  .visbic-body .setLabel, .visbic-body .connection {
+    /*dominant-baseline: middle;*/
+    font: 12px sans-serif;
+    cursor: pointer;
+    font-weight: 300;
+    /*alignment-baseline:middle;*/
+    /*alignment-baseline:middle;*/
+    /* writing-mode: bt-lr;*/ }
+  .visbic-body .setRow .setLabel {
+    font-weight: 500; }
+  .visbic-body .setLabel.small {
+    dominant-baseline: middle;
+    font: 9px sans-serif;
+    cursor: s-resize; }
+  .visbic-body .configTable {
+    float: left; }
+  .visbic-body .groupLabel {
+    /*dominant-baseline: central;*/
+    font: sans-serif;
+    text-anchor: left;
+    cursor: s-resize;
+    font-size: 10pt;
+    font-weight: 200; }
+  .visbic-body .groupLabel.small {
+    /*dominant-baseline: central;*/
+    font: sans-serif;
+    /*font-weight:bold;*/
+    text-anchor: left;
+    cursor: s-resize;
+    font-size: 8pt; }
+  .visbic-body .intersectionSizeLabel {
+    /*dominant-baseline: central;*/
+    font: sans-serif;
+    text-anchor: left;
+    font-size: 8pt;
+    dominant-baseline: middle; }
+  .visbic-body .columnLabel, .visbic-body .axis .columnLabel {
+    dominant-baseline: central;
+    font: 13px sans-serif;
+    text-anchor: middle;
+    cursor: s-resize; }
+  .visbic-body .addButton {
+    dominant-baseline: central;
+    font: 13px sans-serif;
+    text-anchor: middle;
+    cursor: row-resize; }
+  .visbic-body .groupBackGround {
+    /*stroke: #d3d3d3;*/
+    stroke: #555555;
+    stroke-width: 1px;
+    fill: #cccccc;
+    opacity: .3; }
+  .visbic-body .groupBackGround.secondLevel {
+    stroke: #aaaaaa; }
+  .visbic-body .labelBackground {
+    fill: #d3d3d3; }
+  .visbic-body .labelBackground:hover {
+    fill: rgba(145, 145, 145, 0.88);
+    cursor: s-resize; }
+  .visbic-body .setBackground {
+    fill: #d3d3d3;
+    stroke-width: 1;
+    fill: white; }
+  .visbic-body .disproportionality.positive {
+    fill: #74add1; }
+  .visbic-body .disproportionality.negative {
+    fill: #f46d43; }
+  .visbic-body .connection {
+    stroke: white;
+    stroke-width: 1;
+    fill: #f0f0f0; }
+  .visbic-body #setSelect {
+    float: left;
+    padding-right: 10px; }
+  .visbic-body td {
+    padding-left: 2px;
+    padding-right: 2px; }
+  .visbic-body tr:nth-child(even) {
+    background-color: #eee; }
+  .visbic-body th {
+    text-align: left;
+    padding-left: 2px;
+    padding-right: 2px;
+    cursor: s-resize; }
+  .visbic-body th.attribute-header {
+    background-color: lightgray; }
+  .visbic-body th.attribute-header.selected {
+    background-color: yellow; }
+  .visbic-body #selection-tabs {
+    border-bottom: 1px dotted #bbb;
+    padding-bottom: 3px;
+    margin-bottom: 3px; }
+  .visbic-body .selection-tab-list {
+    display: inline-block;
+    min-height: 30px;
+    margin-left: 5px; }
+  .visbic-body .selection-tab {
+    cursor: pointer;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 4px;
+    margin-right: 4px; }
+  .visbic-body .selection-tab.active {
+    background-color: #ccc; }
+  .visbic-body .selection-button {
+    cursor: pointer;
+    background-color: #eee;
+    border-radius: 5px;
+    padding: 4px;
+    margin-right: 4px;
+    display: inline-block; }
+  .visbic-body .selection-button:hover {
+    background-color: #ccc; }
+  .visbic-body .filter-button {
+    cursor: default;
+    color: #2b8cbe;
+    fill: #2b8cbe;
+    /*should be the same as "color" -- for svg and html*/ }
+  .visbic-body .filter-button:hover {
+    color: darkblue; }
+  .visbic-body #venn-diagram-viewer {
+    display: none; }
+  .visbic-body .venn-zero-set-area {
+    fill: #eee; }
+  .visbic-body .venn-one-set-area {
+    fill: #ccc; }
+  .visbic-body .venn-two-set-area {
+    fill: #aaa; }
+  .visbic-body .venn-three-set-area {
+    fill: #999; }
+  .visbic-body .venn-zero-set-area-active {
+    fill: #faa; }
+  .visbic-body .venn-one-set-area-active {
+    fill: #f99; }
+  .visbic-body .venn-two-set-area-active {
+    fill: #f66; }
+  .visbic-body .venn-three-set-area-active {
+    fill: #f33; }
+  .visbic-body .logicPanelCircle {
+    stroke-width: 2pt; }
+  .visbic-body .logicPanelHeaderCircle {
+    stroke-width: 1pt; }
+  .visbic-body #dataset-selector {
+    float: right; }
+  .visbic-body .ui-button {
+    color: #666; }
+  .visbic-body .ui-button:hover {
+    color: #136382;
+    text-shadow: 0 0 10px #3fa0c7; }
+ /* .visbic-body .fixed-y-container {
+    overflow-y: auto; }*/
+  /*.visbic-body #set-vis-container {
+    min-height: 300px; }*/
+  .visbic-body #set-vis-container {
+    min-height: 800px; }
+  /*.visbic-body #set-vis-container {
+    height: auto; }*/
+  .visbic-body #item-vis-container {
+    min-height: 200px;
+    max-height: 400px; }
+  .visbic-body #item-table-container {
+    min-height: 400px;
+    padding-bottom: 10px; }
+  .visbic-body #item-table {
+    border-bottom: 1px dotted #bbb;
+    padding-bottom: 2px; }
+  .visbic-body .item-table-header {
+    padding-top: 3px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 5px;
+    font-size: 10pt;
+    font-weight: bold; }
+  .visbic-body * {
+    margin: 0;
+    padding: 0; }
+  .visbic-body .level-1-button {
+    cursor: default;
+    display: inline-block;
+    font-weight: bold;
+    background-color: #ccc;
+    color: #444;
+    border-radius: 10px;
+    margin-left: 3px;
+    margin-right: 3px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding-left: 8px;
+    padding-right: 8px;
+    padding-top: 1px;
+    padding-bottom: 1px; }
+  .visbic-body .level-1-button:hover {
+    background-color: #aaa;
+    color: #444; }
+  .visbic-body .level-2-button {
+    cursor: default;
+    display: inline-block;
+    color: #444;
+    margin-left: 2px;
+    margin-right: 2px;
+    margin-top: 1px;
+    margin-bottom: 1px;
+    padding-left: 2px;
+    padding-right: 2px;
+    padding-top: 1px;
+    padding-bottom: 1px; }
+  .visbic-body .level-2-button:hover {
+    color: #111; }
+  .visbic-body .info-message {
+    display: block;
+    background-color: #eee;
+    color: #444;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 3px;
+    font-style: italic; 
+	font-size: 12px;}
+  .visbic-body .fo-message {
+    background-color: #eee;
+    color: #444;
+    font-style: italic;
+    font-weight: bold;	
+	font-size: 12px;}
+  .visbic-body .info-message1 {
+    display: block;
+    background-color: #eee;
+    color: #444;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    padding: 3px;
+    font-style: italic; }
+  .visbic-body .element-viewer-header {
+    display: inline; }
+  .visbic-body .element-viewer-title {
+    display: inline; }
+  .visbic-body .element-viewer-editor-button {
+    display: inline-block; }
+  .visbic-body .element-viewer-editor-button:hover {
+    /*text-shadow: 0 0 10px #3fa0c7*/ }
+  .visbic-body .element-viewer-active {
+    margin-top: 5px;
+    border-bottom: 1px dotted #bbb;
+    padding-bottom: 3px;
+    margin-bottom: 5px; }
+  .visbic-body #element-viewer-selector {
+    display: inline;
+    float: none; }
+  .visbic-body #filters-container {
+    display: block; }
+  .visbic-body .filter-header {
+    display: inline; }
+  .visbic-body .filter-title {
+    display: inline; }
+  .visbic-body .filter-editor-button {
+    display: inline-block; }
+  .visbic-body .filter-active {
+    background-color: white;
+    border: 1px dashed lightgray;
+    padding: 5px;
+    margin-top: 5px;
+    margin-bottom: 5px; }
+  .visbic-body .filter-parameter-viewer {
+    font-size: 10pt; }
+  .visbic-body .filter-viewer:not(:first-child) {
+    border-top: 1px dotted #bbb; }
+  .visbic-body .filter-viewer {
+    padding-bottom: 3px;
+    margin-bottom: 1px; }
+  .visbic-body #filter-selector {
+    display: inline;
+    margin-left: 5px; }
+  .visbic-body #filters-list {
+    border-bottom: 1px dotted #bbb;
+    padding-bottom: 2px; }
+  .visbic-body .filter-editor:not(:first-child) {
+    border-top: 1px dotted #bbb; }
+  .visbic-body .filter-editor {
+    padding-bottom: 3px;
+    margin-bottom: 1px; }
+  .visbic-body #filters-controls {
+    padding-top: 5px; }
+  .visbic-body .element-view-header {
+    border-bottom: 1px solid #636363;
+    margin-top: 12px;
+    margin-bottom: 3px;
+    padding-left: 5px; }
+  .visbic-body .element-view-title {
+    display: inline;
+    background-color: #636363;
+    color: white;
+    padding: 2px 5px 1px 5px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 10pt; }
+  .visbic-body .element-view-titleb {
+    display: inline;
+    background-color: #636363;
+    color: white;
+    /*padding: 2px 5px 1px 5px;*/
+    /*border-top-left-radius: 5px;*/
+    /*border-top-right-radius: 5px;*/
+    margin-bottom: 0px;
+    font-weight: thin;
+    font-size: 8pt; }
+  .visbic-body .element-view-subtitle {
+	display: inline;
+    color: #636363;
+    padding: 1px 3px 1px 3px;
+    margin-bottom: 0px;
+    font-weight: bold;
+    font-size: 9pt; }
+  .visbic-body .element-view-controls {
+    min-height: 25px; }
+  .visbic-body .drawBrush, .visbic-body path.connectionArea {
+    fill: gray;
+    opacity: 0.2;
+    stroke: none; }
+  .visbic-body .sliderLabel rect {
+    opacity: .5;
+    fill: #a6bddb; }
+  .visbic-body .sliderLabel line {
+    opacity: .5;
+    stroke: #a6bddb;
+    stroke-width: 2; }
+  .visbic-body .sliderLabel text {
+    opacity: 1;
+    font: 10px sans-serif;
+    fill: black;
+    text-anchor: middle; }
+  .visbic-body .groupLabelText {
+    cursor: pointer; }
+  .visbic-body .collapseIcon, .visbic-body .groupDeleteIcon {
+    font-family: FontAwesome;
+    font-size: 12px;
+    cursor: pointer;
+    text-anchor: middle;
+    /*dominant-baseline: ;*/ }
+  .visbic-body #moveHandle {
+    cursor: pointer;
+    position: relative;
+    left: -13px;
+    background-color: #ddd;
+    float: left;
+    cursor: ew-resize;
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    width: 3px;
+    height: 25px; }
+  .visbic-body .boxPlot {
+    stroke-width: 1px;
+    stroke: black;
+    fill: lightgray;
+    shape-rendering: crispEdges; }
+  .visbic-body .logicButton {
+    font-family: FontAwesome;
+    font-size: 12px;
+    cursor: pointer;
+    text-anchor: middle;
+    dominant-baseline: central; }
+   .bicBody {
+		width: 800px;
+        height: 575px; 
+		overflow: auto;
+		margin-top: 7px;
+	}
+	/*.bicElement {
+		height: 545px;
+		overflow-y: auto; 
+		overflow-x: auto;
+		
+		width: 300px;
+        height: 545px; 
+		overflow:auto;
+	}*/
+	.setLabel .active {
+         fill: red;
+         font-size: 120%;
+    }
+    rect.highlight {
+        fill: none;
+        stroke: red;
+        stroke-width: 2;
+    }
+	text.active {
+        fill: red;
+        font-size: 90%;
+    }
+    /*.bicHeader{
+		width: 930px;
+        height: 50px;
+		overflow:auto;
+	}*/
+	/* The Modal (background) */
+   .modal {
+        display: block; /* Hidden by default */
+		visibility: hidden;
+        position: fixed; /* Stay in place */
+        z-index: 1; /* Sit on top */
+        left: 0;
+        top: 0;
+        width: 100%; /* Full width */
+        height: 100%; /* Full height */
+        overflow: auto; /* Enable scroll if needed */
+        background-color: rgb(0,0,0); /* Fallback color */
+        background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    }
+
+    /* Modal Content/Box */
+   .modal-content {
+		position: absolute;
+		display: block;
+		z-index: 1;
+        background-color: #eee;
+		color: #444;
+        padding: 6px;
+        font-style: italic;
+        /*margin: 15% auto; *//* 15% from the top and centered */
+        border: 1px solid #888;
+        width: 17%;
+		height: 5%; /* Could be more or less, depending on screen size */
+		top: 170px;
+		left: 480px;
+    }
+  .visbic-body .gSeparatorLine {
+    stroke: darkgrey;
+    stroke-width: 3; }
+  /*.visbic-body #bodyVis, .visbic-body #headerVis {
+    display: block;
+    overflow-y: auto;
+    overflow-x: auto; }
+  .visbic-body #wrapper #bodyVis, .visbic-body #wrapper #headerVis {
+    display: block;
+    overflow-y: auto;
+    overflow-x: auto; }*/
+  /*.visbic-body .ui-column.ui-layout-center #bodyVis {
+    display: block;
+    overflow-y: auto;
+    overflow-x: auto; }*/
+  .visbic-body .matrixTableContainer {
+    display: block;
+    overflow-y: hidden;
+    overflow-x: scroll; }
+  .visbic-body .setSelectionArea {
+    fill: lightgrey;
+    stroke: none; }
+  .visbic-body .setSelectionButton {
+    fill: lightgrey;
+    stroke: none; }
+  .visbic-body .setSelectionButton:hover {
+    fill: darkgray; }
+  .visbic-body .pagination, .visbic-body .setMenuExtra {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+    font-weight: 300; }
+  .visbic-body .setSelectionButtonText {
+    fill: #444;
+    font-weight: bold; }
+  .visbic-body .setMenuExtraAwesome {
+    font-family: FontAwesome; }
+  .visbic-body .setSelectionLabelAwesome {
+    font-family: FontAwesome;
+    font-size: 14px;
+    fill: lightgrey;
+    cursor: pointer;
+    font-weight: 300; }
+  .visbic-body .setSelectionLabelAwesome:hover {
+    fill: darkgrey; }
+
