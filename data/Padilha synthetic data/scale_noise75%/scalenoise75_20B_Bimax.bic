@@ -1,0 +1,61 @@
+Bimax with binarize=0.5
+61 2
+gene1 gene2 gene3 gene4 gene8 gene9 gene24 gene36 gene60 gene85 gene87 gene107 gene116 gene122 gene125 gene128 gene131 gene132 gene139 gene144 gene145 gene155 gene165 gene180 gene182 gene189 gene192 gene206 gene213 gene214 gene218 gene227 gene230 gene233 gene238 gene259 gene272 gene282 gene283 gene285 gene295 gene311 gene351 gene377 gene378 gene390 gene395 gene397 gene400 gene421 gene426 gene430 gene446 gene452 gene458 gene462 gene470 gene476 gene488 gene491 gene500
+chip2 chip184
+66 2
+gene1 gene2 gene3 gene5 gene8 gene43 gene45 gene71 gene85 gene87 gene88 gene89 gene91 gene95 gene106 gene122 gene154 gene162 gene174 gene186 gene199 gene209 gene227 gene228 gene229 gene230 gene259 gene277 gene284 gene288 gene294 gene301 gene316 gene320 gene322 gene328 gene331 gene349 gene358 gene362 gene365 gene368 gene371 gene373 gene382 gene393 gene395 gene399 gene401 gene405 gene417 gene424 gene435 gene441 gene443 gene446 gene449 gene452 gene454 gene460 gene467 gene469 gene477 gene480 gene486 gene496
+chip64 chip152
+58 2
+gene1 gene2 gene3 gene5 gene10 gene19 gene26 gene43 gene45 gene67 gene88 gene92 gene100 gene101 gene107 gene128 gene132 gene137 gene149 gene158 gene172 gene174 gene191 gene193 gene205 gene211 gene212 gene220 gene251 gene259 gene266 gene272 gene276 gene284 gene300 gene303 gene309 gene310 gene330 gene338 gene348 gene352 gene355 gene359 gene420 gene428 gene433 gene444 gene456 gene461 gene463 gene466 gene467 gene471 gene475 gene485 gene487 gene492
+chip136 chip159
+55 2
+gene1 gene2 gene3 gene5 gene16 gene28 gene43 gene57 gene63 gene69 gene71 gene87 gene90 gene91 gene96 gene103 gene105 gene156 gene158 gene162 gene169 gene174 gene190 gene195 gene199 gene201 gene242 gene262 gene283 gene320 gene322 gene331 gene345 gene352 gene362 gene368 gene371 gene375 gene376 gene379 gene391 gene397 gene399 gene401 gene410 gene417 gene422 gene437 gene443 gene444 gene454 gene460 gene467 gene471 gene482
+chip62 chip152
+63 2
+gene1 gene2 gene3 gene5 gene10 gene19 gene20 gene43 gene56 gene58 gene62 gene71 gene87 gene91 gene92 gene107 gene113 gene115 gene116 gene118 gene126 gene162 gene171 gene174 gene178 gene179 gene184 gene191 gene192 gene199 gene234 gene236 gene246 gene275 gene279 gene280 gene282 gene311 gene320 gene322 gene324 gene331 gene333 gene341 gene360 gene362 gene368 gene371 gene383 gene384 gene387 gene399 gene401 gene406 gene417 gene428 gene430 gene431 gene443 gene454 gene460 gene467 gene487
+chip62 chip64
+24 3
+gene1 gene2 gene3 gene5 gene43 gene71 gene87 gene91 gene162 gene174 gene199 gene320 gene322 gene331 gene362 gene368 gene371 gene399 gene401 gene417 gene443 gene454 gene460 gene467
+chip62 chip64 chip152
+72 2
+gene1 gene2 gene3 gene5 gene9 gene10 gene12 gene19 gene20 gene21 gene26 gene43 gene45 gene48 gene60 gene87 gene88 gene89 gene91 gene92 gene100 gene107 gene128 gene132 gene152 gene162 gene168 gene172 gene174 gene178 gene189 gene191 gene196 gene200 gene206 gene234 gene236 gene241 gene259 gene266 gene277 gene279 gene284 gene302 gene309 gene310 gene312 gene316 gene317 gene324 gene331 gene336 gene340 gene349 gene360 gene365 gene367 gene387 gene395 gene399 gene411 gene420 gene426 gene428 gene435 gene438 gene445 gene463 gene466 gene467 gene485 gene487
+chip64 chip136
+68 2
+gene1 gene2 gene3 gene5 gene8 gene10 gene19 gene26 gene43 gene45 gene50 gene52 gene56 gene58 gene88 gene92 gene93 gene100 gene106 gene107 gene115 gene119 gene128 gene132 gene135 gene145 gene171 gene172 gene174 gene175 gene184 gene191 gene202 gene209 gene217 gene227 gene228 gene230 gene259 gene266 gene282 gene284 gene288 gene291 gene309 gene310 gene320 gene358 gene362 gene371 gene383 gene384 gene393 gene406 gene420 gene425 gene428 gene441 gene443 gene446 gene449 gene452 gene463 gene466 gene467 gene485 gene486 gene487
+chip64 chip159
+30 3
+gene1 gene2 gene3 gene5 gene10 gene19 gene26 gene43 gene45 gene88 gene92 gene100 gene107 gene128 gene132 gene172 gene174 gene191 gene259 gene266 gene284 gene309 gene310 gene420 gene428 gene463 gene466 gene467 gene485 gene487
+chip64 chip136 chip159
+49 2
+gene1 gene2 gene3 gene5 gene17 gene34 gene37 gene43 gene45 gene87 gene88 gene89 gene91 gene103 gene137 gene148 gene155 gene158 gene162 gene169 gene174 gene183 gene193 gene220 gene259 gene277 gene283 gene284 gene287 gene290 gene300 gene303 gene316 gene319 gene330 gene331 gene349 gene352 gene365 gene379 gene395 gene399 gene422 gene435 gene444 gene461 gene467 gene471 gene475
+chip136 chip152
+23 3
+gene1 gene2 gene3 gene5 gene43 gene45 gene87 gene88 gene89 gene91 gene162 gene174 gene259 gene277 gene284 gene316 gene331 gene349 gene365 gene395 gene399 gene435 gene467
+chip64 chip136 chip152
+64 2
+gene1 gene2 gene3 gene5 gene10 gene19 gene20 gene22 gene39 gene43 gene59 gene64 gene68 gene76 gene87 gene91 gene92 gene103 gene107 gene117 gene130 gene134 gene150 gene158 gene162 gene169 gene170 gene173 gene174 gene178 gene191 gene211 gene212 gene226 gene234 gene236 gene251 gene267 gene279 gene283 gene318 gene321 gene323 gene324 gene326 gene331 gene343 gene352 gene355 gene360 gene379 gene387 gene389 gene399 gene400 gene422 gene428 gene433 gene436 gene444 gene456 gene467 gene471 gene487
+chip62 chip136
+21 3
+gene1 gene2 gene3 gene5 gene43 gene87 gene91 gene103 gene158 gene162 gene169 gene174 gene283 gene331 gene352 gene379 gene399 gene422 gene444 gene467 gene471
+chip62 chip136 chip152
+27 3
+gene1 gene2 gene3 gene5 gene10 gene19 gene20 gene43 gene87 gene91 gene92 gene107 gene162 gene174 gene178 gene191 gene234 gene236 gene279 gene324 gene331 gene360 gene387 gene399 gene428 gene467 gene487
+chip62 chip64 chip136
+12 4
+gene1 gene2 gene3 gene5 gene43 gene87 gene91 gene162 gene174 gene331 gene399 gene467
+chip62 chip64 chip136 chip152
+65 2
+gene1 gene2 gene3 gene5 gene8 gene13 gene16 gene43 gene45 gene57 gene63 gene69 gene74 gene75 gene88 gene106 gene136 gene137 gene141 gene158 gene161 gene174 gene193 gene195 gene209 gene220 gene227 gene228 gene230 gene232 gene259 gene264 gene274 gene284 gene288 gene292 gene298 gene300 gene303 gene306 gene315 gene320 gene330 gene352 gene358 gene362 gene369 gene371 gene377 gene393 gene413 gene423 gene441 gene443 gene444 gene446 gene449 gene452 gene461 gene467 gene471 gene472 gene475 gene482 gene486
+chip152 chip159
+29 3
+gene1 gene2 gene3 gene5 gene8 gene43 gene45 gene88 gene106 gene174 gene209 gene227 gene228 gene230 gene259 gene284 gene288 gene320 gene358 gene362 gene371 gene393 gene441 gene443 gene446 gene449 gene452 gene467 gene486
+chip64 chip152 chip159
+23 3
+gene1 gene2 gene3 gene5 gene43 gene45 gene88 gene137 gene158 gene174 gene193 gene220 gene259 gene284 gene300 gene303 gene330 gene352 gene444 gene461 gene467 gene471 gene475
+chip136 chip152 chip159
+11 4
+gene1 gene2 gene3 gene5 gene43 gene45 gene88 gene174 gene259 gene284 gene467
+chip64 chip136 chip152 chip159
+58 2
+gene1 gene2 gene3 gene5 gene10 gene11 gene16 gene19 gene27 gene43 gene47 gene54 gene56 gene57 gene58 gene63 gene69 gene70 gene92 gene107 gene115 gene157 gene158 gene171 gene174 gene184 gene191 gene195 gene203 gene211 gene212 gene240 gene251 gene282 gene289 gene299 gene314 gene320 gene337 gene352 gene355 gene362 gene371 gene383 gene384 gene406 gene414 gene415 gene428 gene433 gene443 gene444 gene456 gene467 gene471 gene482 gene487 gene493
+chip62 chip159
