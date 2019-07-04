@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>VisBicluster</title>
+  <script src="lib/d3.v3.js" charset="utf-8"></script>
+  <script src="lib/d3.v3.min.js" charset="utf-8"></script>
+  <script src="lib/colorbrewer.js" charset="utf-8"></script>
+  <script src="lib/jquery-2.2.4.js"></script>
+  <script  src="lib/require.js"></script>
+  <script  src="lib/levenshtein.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/html_styles.css">
+  <link rel="stylesheet" type="text/css" href="css/set_view.css">
+  <link rel="stylesheet" type="text/css" href="css/element_view.css">
+  <link rel="stylesheet" type="text/css" href="lib/fontawesome/css/font-awesome.min.css">
+
+  <!-- Fav and touch icons -->
+  <link rel="shortcut icon" type="image/x-icon" href="images/matrix.ico"/>
+</head>
+<body class="visbic-body">
+
+<div id="wrapper">
+<div class="ui-header">
+  <div class="header-container">
+    <span class="header">VisBicluster - Visualizing Biclusters and their Overlaps</span>
+    <span class="header-right-clickable"><a href="https://github.com/Haithem198717/VisBicluster/blob/master/userGuide.pdf">About VisBicluster</a></span>
+    
+																		 
+	<span id="load-data-header2" class="header-right">																			
+													  <input type="button" class="element-view-subtitle" id="loadFileXml1"  value="Load Expression Data" title="Add a new visualization of elements either of biclusters or their overlaps, after the selection of biclustering results. Select a .txt file for expression data." alt="Add a new visualization of elements either of biclusters or their overlaps, after the selection of biclustering results. Select a .txt file for expression data." onclick="document.getElementById('custom-dataset-submit1').click();" / disabled>
+                                                                         <input id="custom-dataset-submit1" type="file" name="file"
+                                                                                value="Choose a file" style="display:none;" onchange="do_totals5(this.files[0]);">
+																				</span>
+	<span id="load-data-header1" class="header-right"> <input type="button" class="element-view-subtitle" id="loadFileXml" value="Load Biclustering Results" title="Add a new visualization of biclusters and their overlaps. Select a .bic file to specify the biclustering results." alt="Add a new visualization of biclusters and their overlaps. Select a .bic file to specify the biclustering results." onclick="document.getElementById('custom-dataset-submit').click();" />
+                                                                         <input id="custom-dataset-submit" type="file" name="file1"
+                                                                                value="Choose a file" style="display:none;" onchange="initData(this.files[0], 0, 1);">
+																		    </span>
+  </div>
+  
+  <div id="myModal1" class="modal">
+        <div class="modal-content">
+		    <p class="info-message1"> Loading Biclustering Results... </p>
+		</div>
+    
+   </div>
+   
+   <div id="myModal2" class="modal">
+        <div class="modal-content">
+		    <p class="info-message1"> Please Wait... </p>
+		</div>
+    
+   </div>
+   
+   <div id="myModal3" class="modal">
+        <div class="modal-content">
+		    <p class="info-message1"> Loading Expression Data... </p>
+		</div>
+    
+   </div>
+  <div id="myModal4" class="modal">
+        <div class="modal-content">
+		    <p class="info-message1"> Please Wait... </p>
+		</div>
+    
+   </div>
+  
+</div>
+
+
+<!--<div ""this.files[0]""   "" "" class="ui-fader">
+</div>-->
+
+
+<div class="ui-container">
+  <div class="ui-row">
+
+    <!--------------- Left Side configuration menu ------------------>
+
+     <div class="ui-column ui-layout-west" style="min-width: 200px; max-width: 300px;">
+	    <div class="element-view-title">
+          Data Analysis
+        </div>
+		
+      <p style="padding-bottom: 10px"></p>
+	  
+      <div id="sortConfig" class="configTable">
+        <div class="configHeader"> Sort by</div>
+        <div class="element-view-subtitle"><input type='radio' id='sortNrSetsInIntersection' name='sort' checked="true" disabled>
+          <label for="sortNrSetsInIntersection" >Number of overlapped bicluters</label></div>
+		  
+		 <p style="padding-bottom: 5px"></p>
+		 
+        <div class="element-view-subtitle"><input type='radio' id='sortIntersectionSize' name='sort' disabled><label for="sortIntersectionSize">
+          Clustering based on <i>Levenshtein Distance</i></label></div>
+      </div>
+	  
+	  <br />
+	  <br />
+	  
+	  <div id="sortConfig1" class="configTable">
+        <div class="configHeader">Filtering</div>
+		
+		    
+			<!--<div class="element-view-subtitle"><input type='radio' id='maxi1' name='sort1' disabled>
+             <label for="maxi1">Max # rows for biclusters
+			     </label> <input id='maxiCardinality1' type='number' min='5' max='2000' value='5'>
+			</div>
+			
+			<p style="padding-bottom: 7px"></p>
+			
+			<div class="element-view-subtitle"><input type='radio' id='maxi2' name='sort1' disabled>
+             <label for="maxi1">Max # columns for biclusters
+			     </label> <input id='maxiCardinality2' type='number' min='2' max='100' value='2'>
+			</div>
+			<p style="padding-bottom: 4px"></p>
+			<hr style="color: #000000;">
+			<p style="padding-bottom: 4px"></p>-->
+            <div class="element-view-subtitle"><input type='radio' id='sortNrSetsInIntersection1' name='sort1' disabled>
+             <label for="sortNrSetsInIntersection1">Drop overlaps with number of 
+			 
+			    <div>
+                   <select id='geneCondChoice'>
+                     <option value="20"> genes </option>
+                     <option value="15"> conditions </option>
+                    </select>
+                </div>  <= </label> <input id='minCardinality1' type='number' min='1' max='500' value='1'>
+				
+				
+				
+			</div>
+		       <p style="padding-bottom: 10px"></p>
+		       
+            <div class="element-view-subtitle"><input type='radio' id='sortNrSetsInIntersection2' name='sort1' disabled>
+		    <label for="sortNrSetsInIntersection2">Show only overlaps with number of overlapped biclusters <= </label> <input id='minCardinality2' type='number' min='1' max='100' value='1'></div>
+		     
+			 <p style="padding-bottom: 10px"></p>
+		
+           <div class="element-view-subtitle"><input type='radio' id='sortNrSetsInIntersection3' name='sort1' disabled>
+		   <label for="sortNrSetsInIntersection3">Show only overlaps with number of overlapped biclusters >= </label> <input id='minCardinality3' type='number' min='1' max='100' value='1'></div>
+	     	 
+			 <br />
+		    <p style="padding-bottom: 7px"></p>
+		     <hr />
+			 <p style="padding-bottom: 7px"></p>
+		  <div class="element-view-subtitle"><input type='radio' id='sortNrSetsInIntersection7' name='sort1' disabled>
+		    <label for="sortNrSetsInIntersection7">Drop biclusters with </label>
+         		
+		    <div>
+               <select id='geneCondValue'>
+                 <option value="20"> > </option>
+                 <option value="15"> < </option>
+                 <option value="12"> = </option>
+               </select>
+            </div> 
+		    <input id='minCardinality4' type='number' min='1' max='1000' value='1'>
+		    <div>
+               <select id='geneCondChoice1'>
+                 <option value="20"> genes </option>
+                 <option value="15"> conditions </option>
+               </select>
+            </div> 
+			
+		   </div>
+		
+		   
+		    <br />
+	
+		   <div class="element-view-subtitle"><input type='radio' id='sortNrSetsInIntersection8' name='sort1' disabled>
+		   <label for="sortNrSetsInIntersection8">Drop biclusters with 
+		   <div>
+             <select id='geneCondValue1'>
+               <option value="20"> > </option>
+               <option value="15"> < </option>
+               <option value="12"> = </option>
+               </select>
+           </div> 
+		   </label> <input id='minCardinality5' type='number' min='0' max='100' value='0'> % overlap (with other biclusters)</div>
+		
+		
+		
+		<p style="padding-bottom: 6px"></p>
+		 <hr style="color: #000000;">
+		<p style="padding-bottom: 6px"></p>
+		<div style="display: table;">
+		<input type="button"  class="element-view-subtitle"   id='sortNrSetsInIntersection5' name='sort1' value='Zoom(+)' disabled>
+		&nbsp;
+		<input type="button"  class="element-view-subtitle"   id='sortNrSetsInIntersection6' name='sort1' value='Zoom(-)' disabled>
+		&nbsp;
+		<input type="button" onClick="reinitialize1()" class="element-view-subtitle"   id='sortNrSetsInIntersection4' name='sort1' value='Reset' disabled>
+	    </div>
+		
+	
+		<p style="padding-bottom: 4px"></p>
+		
+        <div id='dataset-info-viewer'>
+          <div class="configH1">Data Information:</div>
+          <div id='dataset-info-content'>Empty</div>
+        </div>
+		
+		
+	  </div>
+	  
+    </div>
+
+
+    <!---------------center panel with set view  ------------------>
+
+    <!--padding: 0px;-->
+    <div id="matrix-overlaps" class="ui-column ui-layout-center" >
+	   <div class="element-view-title">
+          Matrix of Overlaps Visualization
+        </div>
+	  </br>
+	  </br>
+	  <div id="matrix-viewers-empty" class="info-message1">
+		No visualizations configured. Click <b> Load Biclustering Results </b> button to add a new visualization of biclusters
+		and their overlaps. Select a .bic file to specify the biclustering results.
+	  </div>
+      <div id="set-vis-container" data-height-ratio="1" class="fixed-y-container">
+
+        <!--<div class="matrixTableContainer">-->
+        <div style="display: table;">
+          <!--<div style="display: table-row;">
+            <div style="display: table-cell">
+              <div id="headerVis">
+              </div>
+            </div>
+          </div>-->
+          <div style="display: table-row">
+            <div style="display: table-cell">
+
+              <div id="bodyVis" class="bicBody">
+                <!--style="height:300px; width:200px"-->
+
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+        <!--</div>-->
+
+        <!--<div id="vis"></div>-->
+      </div>
+	   
+    </div>
+	
+	 <!----style="overflow: auto; height: 545px"-----------right panel with element view  style="width:300px;"------------style="width: 500px; min-width: 300px"------>
+
+     <div id="matrix-elements" class="ui-column ui-layout-east" >
+	    <span id="moveHandle"></span>
+	    <div class="element-view-title">
+          Elements Visualization
+        </div>
+		<br/>
+		<br/>
+		<div style="display: table;">
+            <button class="exportImageButton" id='save_as_png' disabled>Download as png</button>
+			&nbsp;
+			<a id="ex" href="" download>
+	             <button class="ButtonTxt" id="save_as_txt" disabled>Download as txt</button>
+            </a>
+        </div>
+		<br/>
+		<div id="element-viewers-empty" class="info-message1">
+		 No visualizations configured. Click <b> Load Expression Data </b> button to add a new visualization of elements either of biclusters
+		 or their overlaps, after the selection of biclustering results. Select a .txt file for expression data.
+		 </div>
+		<div id="element-viewers-particular"></div>
+		<div id="element-viewers-visualization" style="overflow: auto; height: 545px" ></div>
+     </div>
+	 <!-- added divs -->
+
+  </div>
+</div>
+
+
+</div>
+<script type="text/javascript" src="event-manager.js"></script>
+<script type="text/javascript" src="VisBicluster.js"></script>
+<script type="text/javascript" src="ui.js"></script>
+<script>
+  $(document).ready(function () {
+    ui = new Ui();
+
+    $(window).resize(ui.resize);
+
+    $(EventManager).bind("ui-resize", function (event, data) {
+      ui.updateFixedHeightContainers();
+    });
+
+    $(EventManager).bind("ui-vertical-resize", function (event, data) {
+      ui.updateFixedHeightContainers();
+    });
+
+    $(EventManager).bind("ui-horizontal-resize", function (event, data) {
+      // nothing so far
+    });
+
+  });
+</script>
+</body>
+</html>
