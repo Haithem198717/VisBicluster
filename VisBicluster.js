@@ -688,11 +688,11 @@ var svg = d3.select("#bodyVis").append("svg")
          zoomlistener.scale(zoomfactor).event(d3.select("svg"));
     });
 	d3.select("#sortNrSetsInIntersection6").on("click", function (){
-       zoomfactor = zoomfactor - 0.08;
+       zoomfactor = zoomfactor - 0.095;
        zoomlistener.scale(zoomfactor).event(d3.select(svg));
     });
     function redraw() {
-        svg.attr("transform", "translate(" + 35  + "," + 45 + ")scale(" + d3.event.scale + ")");
+        svg.attr("transform", "translate(" + 35  + "," + 35 + ")scale(" + d3.event.scale + ")");
     }
 	
 svg.append("rect")
